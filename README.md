@@ -12,12 +12,14 @@ docker run -d -p 5672:5672 rabbitmq
 ```
 TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
-PHONE_FOR_SMS=
 ```
 
 ## 4. Run worker
 ```
 celery -A lesson_11_celery worker -l INFO
+
+або на Windows
+celery -A lesson_11_celery worker -l INFO --pool=solo
 ```
 
 ## 5. Run Django web server
